@@ -1,15 +1,8 @@
 <template>
   <div class="game">
     游戏管理
-    <button @click="changeGoldDialog = !changeGoldDialog">anniu</button>
-    <Dialog
-      v-if="changeGoldDialog"
-      title="This is a basic dialog"
-      :buttons="['OK']"
-    >
-      Hello
-    </Dialog>
-    <Button theme="light-blue">下一步</Button>
+    <Button class="game__bt" @click="changeGoldDialog = !changeGoldDialog" theme="light-blue">显示弹窗</Button>
+    <Dialog v-if="changeGoldDialog" title="This is a basic dialog" :buttons="['OK']">Hello</Dialog>
   </div>
 </template>
 <script lang="ts">
@@ -17,7 +10,7 @@ import { Vue, Component, Watch } from "vue-property-decorator";
 import { Dialog } from "components";
 
 @Component({
-  components: { Dialog }
+  components: { Dialog },
 })
 export default class game extends Vue {
   changeGoldDialog = false;
@@ -35,5 +28,8 @@ export default class game extends Vue {
   padding: dim(30) dim(20);
   position: relative;
   margin: dim(20);
+  &__bt {
+    width: dim(100);
+  }
 }
 </style>

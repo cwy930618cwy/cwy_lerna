@@ -1,0 +1,18 @@
+import APIRequest, { HTTPMethod } from './api-request';
+export { APIRequest, HTTPMethod };
+import Login from './login';
+import Register from './register';
+import SendSms from './send-sms';
+import CompanyIndentification from './company-indentification';
+import ServiceIndentification from './service-indentification';
+import ServiceIndentificationConfirm from './service-indentification-confirm';
+import PersonalIndentification from './personal-indentification';
+import LockWallet from './lock-wallet';
+import WalletRemain from './wallet-remain';
+import TransactionRecord from './transaction-record';
+import GetCountries from './get-countries';
+import GetUserInfo from './get-user-info';
+import GetCertification from './get-certification';
+import SubmitPersonalCertification from './submit-psersonal-certification';
+import UploadFile from './upload-file';
+export { Login, Register, SendSms, CompanyIndentification, LockWallet, ServiceIndentification, ServiceIndentificationConfirm, PersonalIndentification, WalletRemain, TransactionRecord, GetCountries, GetUserInfo, GetCertification, SubmitPersonalCertification, UploadFile };

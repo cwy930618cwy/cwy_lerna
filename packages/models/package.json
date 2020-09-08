@@ -1,0 +1,19 @@
+{
+  "name": "models",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "build": "build-ts-project"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^0.66.6",
+    "scripts": "^1.0.0",
+    "typescript": "^3.1.2"
+  }
+}

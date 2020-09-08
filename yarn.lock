@@ -2494,6 +2494,11 @@
   resolved "https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.45.tgz#e9387572998e5ecdac221950dab3e8c3b16af884"
   integrity sha1-6Th1cpmOXs2sIhlQ2rPow7Fq+IQ=
 
+"@types/estree@0.0.39":
+  version "0.0.39"
+  resolved "https://registry.npm.taobao.org/@types/estree/download/@types/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
+  integrity sha1-4Xfmme4bjCLSMXTKqnQiZEOJUJ8=
+
 "@types/glob@^7.1.1":
   version "7.1.3"
   resolved "https://registry.npm.taobao.org/@types/glob/download/@types/glob-7.1.3.tgz?cache=0&sync_timestamp=1594078208386&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fglob%2Fdownload%2F%40types%2Fglob-7.1.3.tgz#e6ba80f36b7daad2c685acd9266382e68985c183"
@@ -2527,7 +2532,7 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^23.1.4", "@types/jest@^23.3.2":
+"@types/jest@^23.1.4", "@types/jest@^23.3.2", "@types/jest@^23.3.3", "@types/jest@^23.3.5":
   version "23.3.14"
   resolved "https://registry.npm.taobao.org/@types/jest/download/@types/jest-23.3.14.tgz?cache=0&sync_timestamp=1596171625088&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
   integrity sha1-N9qveAaeeUhSBHTIe4AJLqkSUgo=
@@ -3947,7 +3952,7 @@ aws4@^1.8.0:
   resolved "https://registry.npm.taobao.org/aws4/download/aws4-1.10.0.tgz#a17b3a8ea811060e74d47d306122400ad4497ae2"
   integrity sha1-oXs6jqgRBg501H0wYSJACtRJeuI=
 
-axios@0.18.1:
+axios@0.18.1, axios@^0.18.0:
   version "0.18.1"
   resolved "https://registry.npm.taobao.org/axios/download/axios-0.18.1.tgz?cache=0&sync_timestamp=1597979791211&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.18.1.tgz#ff3f0de2e7b5d180e757ad98000f1081b87bcea3"
   integrity sha1-/z8N4ue10YDnV62YAA8Qgbh7zqM=
@@ -5142,6 +5147,11 @@ builtin-modules@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npm.taobao.org/builtin-modules/download/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
   integrity sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
+
+builtin-modules@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npm.taobao.org/builtin-modules/download/builtin-modules-2.0.0.tgz#60b7ef5ae6546bd7deefa74b08b62a43a232648e"
+  integrity sha1-YLfvWuZUa9fe76dLCLYqQ6IyZI4=
 
 builtin-status-codes@^3.0.0:
   version "3.0.0"
@@ -9553,6 +9563,11 @@ icss-utils@^4.0.0, icss-utils@^4.1.1:
   dependencies:
     postcss "^7.0.14"
 
+id-validator@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.npm.taobao.org/id-validator/download/id-validator-1.3.0.tgz#5e0546803c0d17f4680c31f2c8c8194c582d695a"
+  integrity sha1-XgVGgDwNF/RoDDHyyMgZTFgtaVo=
+
 ieee754@^1.1.4:
   version "1.1.13"
   resolved "https://registry.npm.taobao.org/ieee754/download/ieee754-1.1.13.tgz#ec168558e95aa181fd87d37f55c32bbcb6708b84"
@@ -10148,6 +10163,11 @@ is-map@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/is-map/download/is-map-2.0.1.tgz#520dafc4307bb8ebc33b813de5ce7c9400d644a1"
   integrity sha1-Ug2vxDB7uOvDO4E95c58lADWRKE=
+
+is-module@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/is-module/download/is-module-1.0.0.tgz#3258fb69f78c14d5b815d664336b4cffb6441591"
+  integrity sha1-Mlj7afeMFNW4FdZkM2tM/7ZEFZE=
 
 is-negative-zero@^2.0.0:
   version "2.0.0"
@@ -10929,6 +10949,11 @@ jest-leak-detector@^24.9.0:
   dependencies:
     jest-get-type "^24.9.0"
     pretty-format "^24.9.0"
+
+jest-localstorage-mock@^2.2.0:
+  version "2.4.3"
+  resolved "https://registry.npm.taobao.org/jest-localstorage-mock/download/jest-localstorage-mock-2.4.3.tgz#29a77a892acdbe2303436a5eb28d03997d98a430"
+  integrity sha1-Kad6iSrNviMDQ2peso0DmX2YpDA=
 
 jest-matcher-utils@^23.6.0:
   version "23.6.0"
@@ -15837,6 +15862,23 @@ rollup-plugin-commonjs@^10.1.0:
     resolve "^1.11.0"
     rollup-pluginutils "^2.8.1"
 
+rollup-plugin-node-resolve@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.npm.taobao.org/rollup-plugin-node-resolve/download/rollup-plugin-node-resolve-3.4.0.tgz#908585eda12e393caac7498715a01e08606abc89"
+  integrity sha1-kIWF7aEuOTyqx0mHFaAeCGBqvIk=
+  dependencies:
+    builtin-modules "^2.0.0"
+    is-module "^1.0.0"
+    resolve "^1.1.6"
+
+rollup-plugin-replace@^2.1.0:
+  version "2.2.0"
+  resolved "https://registry.npm.taobao.org/rollup-plugin-replace/download/rollup-plugin-replace-2.2.0.tgz#f41ae5372e11e7a217cde349c8b5d5fd115e70e3"
+  integrity sha1-9BrlNy4R56IXzeNJyLXV/RFecOM=
+  dependencies:
+    magic-string "^0.25.2"
+    rollup-pluginutils "^2.6.0"
+
 rollup-plugin-scss@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npm.taobao.org/rollup-plugin-scss/download/rollup-plugin-scss-0.4.0.tgz#26b57c3c1601fb10087ff28c339e66aaa8b1e638"
@@ -15876,12 +15918,20 @@ rollup-plugin-vue@^4.4.0-alpha.0:
     source-map "0.7.3"
     vue-runtime-helpers "1.0.0"
 
-rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.8.1:
+rollup-pluginutils@^2.0.1, rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.6.0, rollup-pluginutils@^2.8.1:
   version "2.8.2"
   resolved "https://registry.npm.taobao.org/rollup-pluginutils/download/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
   integrity sha1-cvKvB0i1kjZNvTOJ5gDlqURKNR4=
   dependencies:
     estree-walker "^0.6.1"
+
+rollup@^0.66.4, rollup@^0.66.6:
+  version "0.66.6"
+  resolved "https://registry.npm.taobao.org/rollup/download/rollup-0.66.6.tgz?cache=0&sync_timestamp=1599543104268&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Frollup%2Fdownload%2Frollup-0.66.6.tgz#ce7d6185beb7acea644ce220c25e71ae03275482"
+  integrity sha1-zn1hhb63rOpkTOIgwl5xrgMnVII=
+  dependencies:
+    "@types/estree" "0.0.39"
+    "@types/node" "*"
 
 rollup@^1.12.0:
   version "1.32.1"
@@ -17649,7 +17699,7 @@ tryer@^1.0.1:
   resolved "https://registry.npm.taobao.org/tryer/download/tryer-1.0.1.tgz#f2c85406800b9b0f74c9f7465b81eaad241252f8"
   integrity sha1-8shUBoALmw90yfdGW4HqrSQSUvg=
 
-ts-jest@^23.0.0, ts-jest@^23.10.1:
+ts-jest@^23.0.0, ts-jest@^23.10.1, ts-jest@^23.10.4:
   version "23.10.5"
   resolved "https://registry.npm.taobao.org/ts-jest/download/ts-jest-23.10.5.tgz?cache=0&sync_timestamp=1596003185939&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fts-jest%2Fdownload%2Fts-jest-23.10.5.tgz#cdb550df4466a30489bf70ba867615799f388dd5"
   integrity sha1-zbVQ30RmowSJv3C6hnYVeZ84jdU=
@@ -17874,7 +17924,7 @@ typescript@^2.9.2:
   resolved "https://registry.npm.taobao.org/typescript/download/typescript-2.9.2.tgz?cache=0&sync_timestamp=1598424538039&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
   integrity sha1-HL9h0F1rliaSROtqO85L2RTg8Aw=
 
-typescript@^3.9.7:
+typescript@^3.1.1, typescript@^3.1.2, typescript@^3.9.7:
   version "3.9.7"
   resolved "https://registry.npm.taobao.org/typescript/download/typescript-3.9.7.tgz?cache=0&sync_timestamp=1598424538039&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftypescript%2Fdownload%2Ftypescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha1-mNYApevcOPQMsndSLxLcgA6eJfo=
@@ -18442,6 +18492,11 @@ vue@2.6.10:
   resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha1-pysaQqTYKnIepDjRtr9V5mGVxjc=
 
+vue@^2.5.17:
+  version "2.6.12"
+  resolved "https://registry.npm.taobao.org/vue/download/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
+  integrity sha1-9evU+mvShpQD4pqJau1JBEVskSM=
+
 vuedraggable@2.20.0:
   version "2.20.0"
   resolved "https://registry.npm.taobao.org/vuedraggable/download/vuedraggable-2.20.0.tgz#82eac1f9a32c116ef4cf5215fe18dfb152afa9dd"
@@ -18454,6 +18509,11 @@ vuelidate@^0.7.4:
   resolved "https://registry.npm.taobao.org/vuelidate/download/vuelidate-0.7.5.tgz#ff48c75ae9d24ea24c24e9ea08065eda0a0cba0a"
   integrity sha1-/0jHWunSTqJMJOnqCAZe2goMugo=
 
+vuex-module-decorators@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.npm.taobao.org/vuex-module-decorators/download/vuex-module-decorators-0.8.0.tgz#8c7d6526942d3496a2c28365889648f6f09b1e3d"
+  integrity sha1-jH1lJpQtNJaiwoNliJZI9vCbHj0=
+
 vuex-typescript@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npm.taobao.org/vuex-typescript/download/vuex-typescript-3.0.2.tgz#d0b23acf7c046bce36ddfef756a7110d4551f9a9"
@@ -18463,6 +18523,11 @@ vuex@3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.1.0.tgz#634b81515cf0cfe976bd1ffe9601755e51f843b9"
   integrity sha1-Y0uBUVzwz+l2vR/+lgF1XlH4Q7k=
+
+vuex@^3.0.1:
+  version "3.5.1"
+  resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.5.1.tgz#f1b8dcea649bc25254cf4f4358081dbf5da18b3d"
+  integrity sha1-8bjc6mSbwlJUz09DWAgdv12hiz0=
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"
