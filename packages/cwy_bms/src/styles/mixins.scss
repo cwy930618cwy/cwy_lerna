@@ -1,0 +1,18 @@
+@mixin font-medium {
+  font-family: 'PingFangSC-Medium';
+  font-weight: normal;
+}
+@mixin font-regular {
+  font-family: 'PingFangSC-Regular';
+  font-weight: normal;
+}
+
+@mixin font-light {
+  font-family: "PingFangSC-Light";
+  font-weight: normal;
+}
+
+@mixin font-semibold {
+  font-family: "PingFangSC-Semibold";
+  font-weight: normal;
+}
