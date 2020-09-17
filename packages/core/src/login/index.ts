@@ -4,14 +4,19 @@ import { Login as LoginAPI } from "api";
 import { Authentication } from "data";
 
 export default class Login implements AsyncUsecase {
-  phone = "";
+  username = "";
 
   password = "";
 
   async execute() {
-    const api = new LoginAPI(this.phone, this.password);
-    const { token, account } = await api.response;
-    Authentication.saveToken(token);
-    Authentication.saveAccount(account);
+    const api = new LoginAPI(this.username, this.password);
+
+    console.log("api----", api);
+
+    const token = await api.response;
+
+    console.log("core----", token);
+
+    return token;
   }
 }

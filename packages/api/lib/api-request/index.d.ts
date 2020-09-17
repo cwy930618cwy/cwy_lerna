@@ -17,9 +17,9 @@ export default abstract class APIRequest<T> {
     protected anonymous: boolean;
     private _task?;
     private _response?;
-    readonly response: Promise<T>;
-    readonly meta: Promise<any>;
-    private readonly task;
+    get response(): Promise<T>;
+    get meta(): Promise<any>;
+    private get task();
     protected parse(data: any): T;
     protected handleError(reason: string, data: any): T;
     private tryTask;

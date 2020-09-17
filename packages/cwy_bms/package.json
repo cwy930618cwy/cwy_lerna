@@ -12,7 +12,7 @@
     "new": "plop",
     "svgo": "svgo -f src/icons/svg --config=src/icons/svgo.yml",
     "serve": "npm run prebuild && vue-cli-service serve",
-    "prebuild": "lerna run build --scope=components",
+    "prebuild": "lerna run build --scope={api,core,data,components}",
     "test:unit": "jest --clearCache && vue-cli-service test:unit",
     "test:ci": "npm run lint && npm run test:unit"
   },
@@ -22,6 +22,7 @@
     "clipboard": "2.0.4",
     "codemirror": "5.45.0",
     "components": "^1.0.0",
+    "core": "^1.0.0",
     "core-js": "3.6.5",
     "driver.js": "0.9.5",
     "dropzone": "5.5.1",

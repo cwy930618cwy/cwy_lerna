@@ -3,7 +3,6 @@
     <el-form
       ref="loginForm"
       :model="loginForm"
-      :rules="loginRules"
       class="login-form"
       autocomplete="on"
       label-position="left"
@@ -72,90 +71,80 @@
 <script>
 import { validUsername } from "@/utils/validate";
 import svgIcon from "@/components/SvgIcon";
+import UsecaseMixin from "@/utils/usecase-mixin";
+import { Login as LoginUsecase } from "core";
+import { Vue, Component, Watch } from "vue-property-decorator";
 
-export default {
-  name: "Login",
-  components: { svgIcon },
-  data() {
-    const validateUsername = (rule, value, callback) => {
-      if (!validUsername(value)) {
-        callback(new Error("请输入正确的账号"));
-      } else {
-        callback();
-      }
-    };
-    const validatePassword = (rule, value, callback) => {
-      if (value.length < 6) {
-        callback(new Error("密码不能少于6位"));
-      } else {
-        callback();
-      }
-    };
-    return {
-      loginForm: {
-        username: "", // admin
-        password: "" // 205489
-      },
-      loginRules: {
-        username: [{ required: true, trigger: "blur" }],
-        password: [
-          { required: true, trigger: "blur", validator: validatePassword }
-        ]
-      },
-      passwordType: "password",
-      capsTooltip: false,
-      loading: false,
-      showDialog: false,
-      redirect: undefined,
-      otherQuery: {}
-    };
-  },
+import { mixins } from "vue-class-component";
+
+@Component({
+  components: { svgIcon }
+})
+export default class Login extends mixins(UsecaseMixin(LoginUsecase)) {
+  capsTooltip = false;
+  passwordType = "";
+  loading = false;
+  loginForm = {
+    username: "", // admin
+    password: "" // 205489
+  };
+
   mounted() {
     if (this.loginForm.username === "") {
       this.$refs.username.focus();
     } else if (this.loginForm.password === "") {
       this.$refs.password.focus();
     }
-  },
-  methods: {
-    checkCapslock(e) {
-      const { key } = e;
-      this.capsTooltip = key && key.length === 1 && key >= "A" && key <= "Z";
-    },
-    showPwd() {
-      if (this.passwordType === "password") {
-        this.passwordType = "";
-      } else {
-        this.passwordType = "password";
-      }
-      this.$nextTick(() => {
-        this.$refs.password.focus();
-      });
-    },
-    handleLogin() {
-      this.$refs.loginForm.validate(valid => {
-        if (valid) {
-          this.loading = true;
-          this.$store
-            .dispatch("user/Login", this.loginForm)
-            .then(() => {
-              this.$router.push({
-                path: this.redirect || "/",
-                query: this.otherQuery
-              });
-              this.loading = false;
-            })
-            .catch(() => {
-              this.loading = false;
-            });
-        } else {
-          console.log("error submit!!");
-          return false;
-        }
-      });
-    }
   }
-};
+  checkCapslock(e) {
+    const { key } = e;
+    this.capsTooltip = key && key.length === 1 && key >= "A" && key <= "Z";
+  }
+  showPwd() {
+    if (this.passwordType === "password") {
+      this.passwordType = "";
+    } else {
+      this.passwordType = "password";
+    }
+    this.$nextTick(() => {
+      this.$refs.password.focus();
+    });
+  }
+
+  async handleLogin() {
+    console.log("nima---");
+
+    try {
+      const wal = await this.execute(LoginUsecase, {
+        username: "11",
+        password: "111"
+      });
+      console.log("wal------", wal);
+    } catch (e) {
+      console.log("nimabbb----", e);
+    }
+    // this.$refs.loginForm.validate((valid) => {
+    //   if (valid) {
+    //     this.loading = true;
+    //     this.$store
+    //       .dispatch("user/Login", this.loginForm)
+    //       .then(() => {
+    //         this.$router.push({
+    //           path: this.redirect || "/",
+    //           query: this.otherQuery,
+    //         });
+    //         this.loading = false;
+    //       })
+    //       .catch(() => {
+    //         this.loading = false;
+    //       });
+    //   } else {
+    //     console.log("error submit!!");
+    //     return false;
+    //   }
+    // });
+  }
+}
 </script>
 
 <style lang="scss">

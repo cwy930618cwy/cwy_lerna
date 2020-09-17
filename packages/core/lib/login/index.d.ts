@@ -1,6 +1,6 @@
-import { AsyncUsecase } from '../usecase';
+import { AsyncUsecase } from "../usecase";
 export default class Login implements AsyncUsecase {
-    phone: string;
+    username: string;
     password: string;
-    execute(): Promise<void>;
+    execute(): Promise<any>;
 }

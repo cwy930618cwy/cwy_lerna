@@ -1,16 +1,14 @@
 import APIRequest, { HTTPMethod } from "../api-request";
 import { Account } from "models";
-export default class Login extends APIRequest<{
-  token: string;
-  account: Account;
-}> {
-  path = "accounts/token";
+export default class Login extends APIRequest<any> {
+  path = "/user/login";
   method = HTTPMethod.POST;
-  constructor(phone: string, password: string) {
+  constructor(username: string, password: string) {
     super();
-    this.params = { phone, password };
+    this.params = { username, password };
   }
-  parse({ token, account }: any) {
-    return { token, account: account };
+  parse(token: any) {
+    console.log("api=------", token);
+    return token;
   }
 }
