@@ -54,7 +54,7 @@ export default class Layout extends Vue {
   }
 
   handleClickOutside() {
-    this.$store.dispatch("app/closeSideBar", { withoutAnimation: false });
+    // this.$store.dispatch("app/closeSideBar", { withoutAnimation: false });
   }
 }
 </script>

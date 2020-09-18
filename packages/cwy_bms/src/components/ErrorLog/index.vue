@@ -70,7 +70,6 @@ export default class errorLog extends Vue {
   dialogTableVisible = false;
   clearAll() {
     this.dialogTableVisible = false;
-    this.$store.dispatch("errorLog/clearErrorLog");
   }
 }
 </script>

@@ -55,30 +55,25 @@ var Authentication_1;
 let Authentication = Authentication_1 = class Authentication extends VuexModule {
     constructor(module) {
         super(module);
-        this.token = null;
+        this.token = "66666";
         this.account = null;
-        const token = localStorage.getItem(Authentication_1.tokenKey);
-        if (token) {
-            const { value, expire } = JSON.parse(token);
-            if (expire > Date.now())
-                this.token = value;
-        }
     }
     saveToken(token) {
         this.token = token;
-        localStorage.setItem(Authentication_1.tokenKey, JSON.stringify({
-            value: token,
-            expire: Date.now() + 7 * 24 * 3600 * 1000
-        }));
+        console.log("auth---------------", this.token);
     }
     deleteToken() {
         this.token = null;
         localStorage.removeItem(Authentication_1.tokenKey);
     }
-    saveAccount(account) { this.account = account; }
-    updateAccountType(type) { this.account && (this.account.type = type); }
+    saveAccount(account) {
+        this.account = account;
+    }
+    updateAccountType(type) {
+        this.account && (this.account.type = type);
+    }
 };
-Authentication.tokenKey = 'hashfuture-token';
+Authentication.tokenKey = "hashfuture-token";
 __decorate([
     Mutation,
     __metadata("design:type", Function),

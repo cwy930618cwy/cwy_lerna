@@ -8,7 +8,6 @@ export default class Login extends APIRequest<any> {
     this.params = { username, password };
   }
   parse(token: any) {
-    console.log("api=------", token);
     return token;
   }
 }

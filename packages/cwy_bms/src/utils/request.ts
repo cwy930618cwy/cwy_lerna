@@ -67,9 +67,9 @@ service.interceptors.response.use(
             type: "warning"
           }
         ).then(() => {
-          store.dispatch("user/resetToken").then(() => {
-            location.reload();
-          });
+          // store.dispatch("user/resetToken").then(() => {
+          //   location.reload();
+          // });
         });
       }
       return Promise.reject(new Error(res.message || "Error"));

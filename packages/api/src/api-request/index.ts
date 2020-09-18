@@ -35,9 +35,6 @@ export default abstract class APIRequest<T> {
         try {
           data = this.parse(data);
         } catch (e) {}
-
-        console.log("data----", data);
-
         if (status === 200) return data;
         return this.handleError(status, data);
       });

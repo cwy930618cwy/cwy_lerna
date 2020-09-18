@@ -1,5 +1,5 @@
-import { VuexModule } from 'vuex-module-decorators';
-import { Account, AccountType } from 'models';
+import { VuexModule } from "vuex-module-decorators";
+import { Account, AccountType } from "models";
 declare class Authentication extends VuexModule {
     token: string | null;
     account: Account | null;

@@ -31,7 +31,6 @@ export default function UCMixin<T extends Usecase>(usecase: {
         aUsecase: Ctor<Usecase>,
         propertyMapping: { [k in keyof T]?: any } & ThisType<any> = {}
       ) {
-        console.log("???");
         const obj = new aUsecase();
         Object.keys(obj).forEach(k => {
           if (typeof k === "function") return;
@@ -43,7 +42,6 @@ export default function UCMixin<T extends Usecase>(usecase: {
             (obj as any)[k] = (this as any)[k];
           }
         });
-        console.log("eee");
         return aUsecase.prototype.execute.apply(obj);
       }
     }

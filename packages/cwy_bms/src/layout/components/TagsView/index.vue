@@ -113,14 +113,14 @@ export default class Index extends Vue {
     for (const tag of affixTags) {
       // Must have tag name
       if (tag.name) {
-        this.$store.dispatch("tagsView/addVisitedView", tag);
+        // this.$store.dispatch("tagsView/addVisitedView", tag);
       }
     }
   }
   addTags() {
     const { name } = this.$route;
     if (name) {
-      this.$store.dispatch("tagsView/addView", this.$route);
+      // this.$store.dispatch("tagsView/addView", this.$route);
     }
     return false;
   }
@@ -132,7 +132,7 @@ export default class Index extends Vue {
           (this.$refs.scrollPane as any).moveToTarget(tag);
           // when query is different then update
           if (tag.to.fullPath !== this.$route.fullPath) {
-            this.$store.dispatch("tagsView/updateVisitedView", this.$route);
+            // this.$store.dispatch("tagsView/updateVisitedView", this.$route);
           }
           break;
         }
@@ -140,37 +140,37 @@ export default class Index extends Vue {
     });
   }
   refreshSelectedTag(view: { fullPath: any }) {
-    this.$store.dispatch("tagsView/delCachedView", view).then(() => {
-      const { fullPath } = view;
-      this.$nextTick(() => {
-        this.$router.replace({
-          path: "/redirect" + fullPath
-        });
-      });
-    });
+    // this.$store.dispatch("tagsView/delCachedView", view).then(() => {
+    //   const { fullPath } = view;
+    //   this.$nextTick(() => {
+    //     this.$router.replace({
+    //       path: "/redirect" + fullPath
+    //     });
+    //   });
+    // });
   }
   closeSelectedTag(view: { path: string }) {
-    this.$store.dispatch("tagsView/delView", view).then(({ visitedViews }) => {
-      if (this.isActive(view)) {
-        this.toLastView(visitedViews, view);
-      }
-    });
+    // this.$store.dispatch("tagsView/delView", view).then(({ visitedViews }) => {
+    //   if (this.isActive(view)) {
+    //     this.toLastView(visitedViews, view);
+    //   }
+    // });
   }
   closeOthersTags() {
     this.$router.push(this.selectedTag);
-    this.$store
-      .dispatch("tagsView/delOthersViews", this.selectedTag)
-      .then(() => {
-        this.moveToCurrentTag();
-      });
+    // this.$store
+    //   .dispatch("tagsView/delOthersViews", this.selectedTag)
+    //   .then(() => {
+    //     this.moveToCurrentTag();
+    //   });
   }
   closeAllTags(view: { path: any }) {
-    this.$store.dispatch("tagsView/delAllViews").then(({ visitedViews }) => {
-      if (this.affixTags.some((tag: any) => tag.path === view.path)) {
-        return;
-      }
-      this.toLastView(visitedViews, view);
-    });
+    // this.$store.dispatch("tagsView/delAllViews").then(({ visitedViews }) => {
+    //   if (this.affixTags.some((tag: any) => tag.path === view.path)) {
+    //     return;
+    //   }
+    //   this.toLastView(visitedViews, view);
+    // });
   }
   toLastView(
     visitedViews: any[],

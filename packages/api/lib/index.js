@@ -24,7 +24,6 @@ class APIRequest {
                     data = this.parse(data);
                 }
                 catch (e) { }
-                console.log("data----", data);
                 if (status === 200)
                     return data;
                 return this.handleError(status, data);
@@ -103,7 +102,6 @@ class Login extends APIRequest {
         this.params = { username, password };
     }
     parse(token) {
-        console.log("api=------", token);
         return token;
     }
 }

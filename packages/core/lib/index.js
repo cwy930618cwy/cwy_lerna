@@ -1,4 +1,5 @@
 import { Login } from 'api';
+import { Authentication } from 'data';
 
 class Login$1 {
     constructor() {
@@ -7,9 +8,9 @@ class Login$1 {
     }
     async execute() {
         const api = new Login(this.username, this.password);
-        console.log("api----", api);
-        const token = await api.response;
-        console.log("core----", token);
+        const { token } = await api.response;
+        console.log("Authentication---", Authentication);
+        Authentication.saveToken(token);
         return token;
     }
 }

@@ -77,6 +77,8 @@ import { Vue, Component, Watch } from "vue-property-decorator";
 
 import { mixins } from "vue-class-component";
 
+import { Authentication } from "data";
+
 @Component({
   components: { svgIcon }
 })
@@ -112,16 +114,17 @@ export default class Login extends mixins(UsecaseMixin(LoginUsecase)) {
   }
 
   async handleLogin() {
-    console.log("nima---");
-
     try {
       const wal = await this.execute(LoginUsecase, {
         username: "11",
         password: "111"
       });
       console.log("wal------", wal);
+
+      console.log("url=------token====");
+      console.log(Authentication.token);
     } catch (e) {
-      console.log("nimabbb----", e);
+      console.log("err----", e);
     }
     // this.$refs.loginForm.validate((valid) => {
     //   if (valid) {
