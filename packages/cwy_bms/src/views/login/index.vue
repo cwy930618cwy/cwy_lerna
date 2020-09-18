@@ -119,10 +119,8 @@ export default class Login extends mixins(UsecaseMixin(LoginUsecase)) {
         username: "11",
         password: "111"
       });
-      console.log("wal------", wal);
 
-      console.log("url=------token====");
-      console.log(Authentication.token);
+      console.log("wal----", wal);
     } catch (e) {
       console.log("err----", e);
     }

@@ -10,7 +10,6 @@ class Authentication extends VuexModule {
 
   @Mutation saveToken(token: string) {
     this.token = token;
-    console.log("auth---------------", this.token);
   }
   @Mutation deleteToken() {
     this.token = null;

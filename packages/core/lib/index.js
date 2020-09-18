@@ -9,7 +9,6 @@ class Login$1 {
     async execute() {
         const api = new Login(this.username, this.password);
         const { token } = await api.response;
-        console.log("Authentication---", Authentication);
         Authentication.saveToken(token);
         return token;
     }

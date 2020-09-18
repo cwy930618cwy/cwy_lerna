@@ -60,7 +60,6 @@ let Authentication = Authentication_1 = class Authentication extends VuexModule 
     }
     saveToken(token) {
         this.token = token;
-        console.log("auth---------------", this.token);
     }
     deleteToken() {
         this.token = null;
