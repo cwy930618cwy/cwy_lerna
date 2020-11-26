@@ -113,37 +113,35 @@ export default class Login extends mixins(UsecaseMixin(LoginUsecase)) {
     });
   }
 
-  async handleLogin() {
+  handleLogin() {
+    this.$refs.loginForm.validate(valid => {
+      if (valid) {
+        this.loading = true;
+        this.apiLogin();
+      } else {
+        console.log("error submit!!");
+        return false;
+      }
+    });
+  }
+
+  async apiLogin() {
     try {
       const wal = await this.execute(LoginUsecase, {
         username: "11",
         password: "111"
       });
-
       console.log("wal----", wal);
+
+      // this.$router.push({
+      //   path: this.redirect || "/",
+      //   query: this.otherQuery
+      // });
+      this.loading = false;
     } catch (e) {
       console.log("err----", e);
+      this.loading = false;
     }
-    // this.$refs.loginForm.validate((valid) => {
-    //   if (valid) {
-    //     this.loading = true;
-    //     this.$store
-    //       .dispatch("user/Login", this.loginForm)
-    //       .then(() => {
-    //         this.$router.push({
-    //           path: this.redirect || "/",
-    //           query: this.otherQuery,
-    //         });
-    //         this.loading = false;
-    //       })
-    //       .catch(() => {
-    //         this.loading = false;
-    //       });
-    //   } else {
-    //     console.log("error submit!!");
-    //     return false;
-    //   }
-    // });
   }
 }
 </script>
