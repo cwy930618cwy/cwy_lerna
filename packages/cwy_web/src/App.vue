@@ -1,21 +1,18 @@
 <template>
   <div id="app" class="app">
-    <Header class="header"></Header>
+    <Home/>
     <router-view/>
   </div>
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
-import Header from '@/components/Header/index.vue'
+import Home from '@/views/Home/index.vue'
 
 @Component({
-  components: { Header }
+  components: { Home }
 })
 export default class App extends Vue {
-  get phone () {
-    return ''
-  }
 }
 
 </script>
