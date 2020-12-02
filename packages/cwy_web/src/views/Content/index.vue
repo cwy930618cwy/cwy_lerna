@@ -163,8 +163,7 @@ export default class Content extends Vue {
   .bg{
     height: dim(800);
     width: 100%;
-    background: darkgray;
-    // background: url('../../assets/main.jpg') no-repeat;
+    background: url('../../assets/home_background.png') no-repeat;
     background-position: center center;
     background-size: cover;
     display: flex;
@@ -213,7 +212,9 @@ export default class Content extends Vue {
       .right{
         width: dim(384);
         height: dim(533);
-        background: aliceblue;
+        background: url('../../assets/home_person.png') no-repeat;
+        background-position: center center;
+        background-size: cover;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -226,6 +227,14 @@ export default class Content extends Vue {
         }
       }
     }
+  }
+
+  .main_arrow{
+    width: dim(60);
+    height: dim(15);
+    background: url('../../assets/home_arrow.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
 
   .superpic{

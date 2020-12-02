@@ -11,7 +11,7 @@
           <div class="active__right">
             <h1>{{item.title}}</h1>
             <h2>{{item.content}}</h2> 
-            <div class=""></div>
+            <div class="main_arrow"></div>
           </div>
         </div>
       </div>
@@ -97,9 +97,6 @@ export default class Exchange extends Vue {
         height: dim(106);
         background: #E28E28;
         margin-right: dim(30);
-      }
-      &__right{
-
       }
     }
   }
