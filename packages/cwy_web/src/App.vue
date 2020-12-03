@@ -23,7 +23,6 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100vh;
-  min-width: 1186px;
 }
 
 * {

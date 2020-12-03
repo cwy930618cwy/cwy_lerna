@@ -170,12 +170,12 @@ export default class Content extends Vue {
     flex-direction: column;
     align-items: center;
     .cent{
-      margin-top: 240px;
+      margin-top: dim(240);
       .china{
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 40px;
+        font-size: dim(40);
         flex-direction: column;
         width: dim(400);
         height: dim(200);

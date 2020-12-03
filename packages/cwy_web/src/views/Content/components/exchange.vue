@@ -70,7 +70,7 @@ export default class Exchange extends Vue {
 
 .exchange{
   display: flex;
-  width: 800px;
+  width: dim(800);
   justify-content: space-evenly;
   .left{
     display: flex;
@@ -79,13 +79,13 @@ export default class Exchange extends Vue {
     height: dim(500);
     cursor: pointer;
     overflow: hidden;
-    width: 300px;
+    width: dim(300);
   }
   .cont{
     width: dim(300);
   }
   .tabs{
-    height: 100px;
+    height: dim(100);
     .show{
       height: 100%;
     }
