@@ -68,6 +68,12 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import Exchange from './components/exchange.vue'
+import Route from '@/decorators/route'
+
+@Route({
+  childOf: '/',
+  path: '/centent',
+})
 
 @Component({
   components: { Exchange }

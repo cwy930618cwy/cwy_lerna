@@ -9,6 +9,10 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import Content from '@/views/Content/index.vue'
+import Route from '@/decorators/route'
+
+@Route({ path: '/', redirect: '/centent' })
+
 @Component({
   components: { Content }
 })
